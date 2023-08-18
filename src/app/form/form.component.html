@@ -9,6 +9,12 @@
           placeholder="UxqnikU21"
           formControlName="link"
         />
+        <span
+          class="error-msg"
+          *ngIf="!linkForm.hasError('isInvalid') && linkForm.touched"
+        >
+          <small> Please enter valid video id </small>
+        </span>
         <button [disabled]="!linkForm.valid" title="convert" type="submit">
           Convert
         </button>
